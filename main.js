@@ -88,18 +88,73 @@ function startNotifications(characteristic) {
   return characteristic.startNotifications().
       then(() => {
         log('Notifications started');
+        // Добавленная строка
+        characteristic.addEventListener('characteristicvaluechanged',
+            handleCharacteristicValueChanged);
       });
 }
 /////////////////////////////////////////////
+// Промежуточный буфер для входящих данных
+let readBuffer = '';
 
+// Получение данных
+function handleCharacteristicValueChanged(event) {
+  let value = new TextDecoder().decode(event.target.value);
+
+  for (let c of value) {
+    if (c === '\n') {
+      let data = readBuffer.trim();
+      readBuffer = '';
+
+      if (data) {
+        receive(data);
+      }
+    }
+    else {
+      readBuffer += c;
+    }
+  }
+}
+
+// Обработка полученных данных
+function receive(data) {
+  log(data, 'in');
+}
+
+// Отправить данные подключенному устройству
+function send(data) {
+  data = String(data);
+
+  if (!data || !characteristicCache) {
+    return;
+  }
+
+  data += '\n';
+
+  if (data.length > 20) {
+    let chunks = data.match(/(.|[\r\n]){1,20}/g);
+
+    writeToCharacteristic(characteristicCache, chunks[0]);
+
+    for (let i = 1; i < chunks.length; i++) {
+      setTimeout(() => {
+        writeToCharacteristic(characteristicCache, chunks[i]);
+      }, i * 100);
+    }
+  }
+  else {
+    writeToCharacteristic(characteristicCache, data);
+  }
+
+  log(data, 'out');
+}
 // Вывод в терминал
 function log(data, type = '') {
   terminalContainer.insertAdjacentHTML('beforeend',
       '<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
 }
 /////////////////////////////////////////////////
-
-
+// Отключиться от подключенного устройства
 // Отключиться от подключенного устройства
 function disconnect() {
   if (deviceCache) {
@@ -117,11 +172,16 @@ function disconnect() {
     }
   }
 
-  characteristicCache = null;
+  // Добавленное условие
+  if (characteristicCache) {
+    characteristicCache.removeEventListener('characteristicvaluechanged',
+        handleCharacteristicValueChanged);
+    characteristicCache = null;
+  }
+
   deviceCache = null;
 }
 
-// Отправить данные подключенному устройству
-function send(data) {
-  //
-}
+
+
+
