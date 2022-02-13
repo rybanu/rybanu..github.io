@@ -82,12 +82,12 @@ function connectDeviceAndCacheCharacteristic(device) {
       then(server => {
         log('GATT server connected, getting service...');
 
-        return server.getPrimaryService( '0000FFE0-0000-1000-8000-00805F9B34FB' );///////////     0xFFE0
+        return server.getPrimaryService('0000ffe0-0000-1000-8000-00805f9b34fb');///////////     0xFFE0
       }).
       then(service => {
         log('Service found, getting characteristic...');
 
-        return service.getCharacteristic( '0000FFE1-0000-1000-8000-00805F9B34FB' );  /////// 0xFFE1
+        return service.getCharacteristic('0000ffe1-0000-1000-8000-00805f9b34fb');  /////// 0xFFE1
       }).
       then(characteristic => {
         log('Characteristic found');
