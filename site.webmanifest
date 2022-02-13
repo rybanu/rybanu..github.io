@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "ANGLE_MEAS",
+    "short_name": "ANGLE",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
@@ -36,4 +36,6 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
+    "start_url": "./"
+    "scope": "./"
 }
