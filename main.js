@@ -33,13 +33,14 @@ function connect() {
       then(characteristic => startNotifications(characteristic)).
       catch(error => log(error));
 }
-//////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 // Запрос выбора Bluetooth устройства
 function requestBluetoothDevice() {
   log('Requesting bluetooth device...');
 
   return navigator.bluetooth.requestDevice({
-    filters: [{services: [0xFFE0]}],
+   // filters: [{services: [0xFFE0]}],///////work
+     acceptAllDevices: true,////////////////////////////test
   }).
       then(device => {
         log('"' + device.name + '" bluetooth device selected');
