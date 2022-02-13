@@ -39,7 +39,7 @@ function requestBluetoothDevice() {
   log('Requesting bluetooth device...');
 
   return navigator.bluetooth.requestDevice({
-    filters: [{services: ['0000FFE0-0000-1000-8000-00805F9B34FB']}],///////work   0000ffe0-0000-1000-8000-00805f9b34fb     0xFFE0
+    filters: [{services: [0000FFE0-0000-1000-8000-00805F9B34FB]}],///////work   0000ffe0-0000-1000-8000-00805f9b34fb     0xFFE0
     // acceptAllDevices: true,////////////////////////////test//////
   }).
       then(device => {
