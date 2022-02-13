@@ -40,14 +40,29 @@ function requestBluetoothDevice() {
 
   return navigator.bluetooth.requestDevice({
     filters: [{services: [0xFFE0]}],
-   //0xFFE0
   }).
       then(device => {
         log('"' + device.name + '" bluetooth device selected');
         deviceCache = device;
 
+        // Добавленная строка
+        deviceCache.addEventListener('gattserverdisconnected',
+            handleDisconnection);
+
         return deviceCache;
       });
+}
+
+// Обработчик разъединения
+function handleDisconnection(event) {
+  let device = event.target;
+
+  log('"' + device.name +
+      '" bluetooth device disconnected, trying to reconnect...');
+
+  connectDeviceAndCacheCharacteristic(device).
+      then(characteristic => startNotifications(characteristic)).
+      catch(error => log(error));
 }
 
 /////////////////////////////
@@ -148,6 +163,12 @@ function send(data) {
 
   log(data, 'out');
 }
+
+// Записать значение в характеристику
+function writeToCharacteristic(characteristic, data) {
+  characteristic.writeValue(new TextEncoder().encode(data));
+}
+
 // Вывод в терминал
 function log(data, type = '') {
   terminalContainer.insertAdjacentHTML('beforeend',
