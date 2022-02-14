@@ -1,27 +1,10 @@
-button {
-  background: none;
-  border: 1;
-  color: rgba(0, 0, 0, 0.87);
-  cursor: pointer;
-  margin: 1;
-  padding: 10px;
-  transition: background 0.3s, color 0.3s;
-  user-select: none; }
-  button:active {
-    background: rgba(0, 0, 0, 0.12);
-    color: rgba(10, 10, 10, 0.54); }
-  button i.material-icons {
-    vertical-align: middle; }
-body {
-  background: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 12px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-#terminal div {
-    color: gray;
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 #terminal div.out {
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
