@@ -1,9 +1,9 @@
-.button1 {
+.button {
+    background-color: grey;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    button:active {
+    background: rgba(0, 0, 0, 0.12);
+    color: rgba(10, 10, 10, 0.54); }
 }
 #terminal div.out {
    font-family: 'Roboto Mono', monospace;
