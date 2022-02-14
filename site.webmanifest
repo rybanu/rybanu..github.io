@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "ANGLE",
+    "short_name": "ANGLE",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
@@ -40,5 +40,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
+    "start_url": "https://github.com/rybanu/rybanu..github.io",
     "display": "standalone"
 }
