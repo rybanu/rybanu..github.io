@@ -1,3 +1,17 @@
+button {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  margin: 2;
+  padding: 12px;
+  transition: background 0.3s, color 0.3s;
+  user-select: none; }
+  button:active {
+    background: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.54); }
+  button i.material-icons {
+    vertical-align: middle; }
 body {
   background: #ffffff;
   color: rgba(0, 0, 0, 0.87);
@@ -15,7 +29,7 @@ body {
 
 #terminal div.in {
    padding: 4px 8px;
-    color: blue;
+    color: green;
 }
 © 2022 GitHub, Inc.
 Terms
