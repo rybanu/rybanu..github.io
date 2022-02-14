@@ -3,12 +3,12 @@
 }
 
 #terminal div.out {
-    font: normal 16px/1.5 'Roboto Mono', monospace;
+    padding: 4px 8px;
     color: red;
 }
 
 #terminal div.in {
-    font: normal 16px/1.5 'Roboto Mono', monospace;
+   padding: 4px 8px;
     color: blue;
 }
 © 2022 GitHub, Inc.
