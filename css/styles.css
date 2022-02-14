@@ -1,3 +1,9 @@
+body {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 #terminal div {
     color: gray;
 }
