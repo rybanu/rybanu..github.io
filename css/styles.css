@@ -1,8 +1,8 @@
 button{
-    background-color: grey;
-    box-shadow: 0 8px 16px 0 rgba(20,20,20,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,5,0.2), 0 6px 20px 0 rgba(0,0,15,0.19);
     button:active {
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 20, 0.12);
     color: rgba(10, 10, 10, 0.54); }
 }
 #terminal div.out {
