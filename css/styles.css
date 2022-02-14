@@ -29,10 +29,11 @@ button:active {
   font-size: 16px;
     padding: 1px 1px;
     color: #7DDE3C;
+  overflow: auto;
 }
 
 #terminal div.in {
-
+overflow: auto;
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
    padding: 1px 1px;
