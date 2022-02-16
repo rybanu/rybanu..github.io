@@ -4,7 +4,8 @@ let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
-let age = 25;
+let inputField1 = document.getElementById('input_angl');
+
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -21,6 +22,7 @@ sendForm.addEventListener('submit', function(event) {
   send(inputField.value); // Отправить содержимое текстового поля
   inputField.value = '';  // Обнулить текстовое поле
   inputField.focus();     // Вернуть фокус на текстовое поле
+
 });
 
 // Кэш объекта выбранного устройства
@@ -136,10 +138,9 @@ function handleCharacteristicValueChanged(event) {
 
 // Обработка полученных данных
 function receive(data) {
-  //console.log('Привет от JavaScript!');
-log(data, 'in');
-//  age+=1;
- // log(age, 'in');
+  //  log(0,);
+  log(data, 'in');
+  inputField1.value=data;
 }
 
 // Отправить данные подключенному устройству
@@ -152,7 +153,7 @@ function send(data) {
   }
   //writeToCharacteristic(characteristicCache, data);
  // log(data, 'out');
-  
+
   data += '\n';
 
   if (data.length > 20) {
@@ -171,7 +172,7 @@ function send(data) {
   }
 
   log(data, 'out');
-  
+
 }
 
 // Записать значение в характеристику
@@ -212,7 +213,3 @@ function disconnect() {
 
   deviceCache = null;
 }
-
-
-
-
