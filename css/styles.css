@@ -1,11 +1,4 @@
-*:focus {
-  outline: none; }
-
-html, body, .app {
-  height: 100%;
-  max-height: 100%;
-  min-height: 100%; }
-body {
+﻿body {
   background: #363E44;
   color: #9FC7EB;
   font-family: 'Roboto Mono', monospace;
@@ -30,22 +23,33 @@ button:active {
   button i.material-icons {
     vertical-align: middle; }
 
+  #input_angl {
+        background: #52616C;
+        color: #71BDFF; }
+        #input {
+              background: #52616C;
+              color: #7DDE3C; }
+
 #terminal div.out {
 
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
     padding: 1px 1px;
     color: #7DDE3C;
-  overflow: auto;
 }
 
 #terminal div.in {
-overflow: auto;
+overflow-y: scroll;
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
    padding: 1px 1px;
     color: #71BDFF;
+
 }
+
+
 © 2022 GitHub, Inc.
+
+
 Terms
 Priv
