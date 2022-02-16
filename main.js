@@ -136,7 +136,7 @@ function handleCharacteristicValueChanged(event) {
 
 // Обработка полученных данных
 function receive(data) {
-  log(data, 'in');
+  print(data, 'in');
 }
 
 // Отправить данные подключенному устройству
