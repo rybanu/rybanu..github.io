@@ -211,5 +211,5 @@ function disconnect() {
     characteristicCache = null;
   }
 
-  deviceCache = null;
+  //deviceCache = null;
 }
