@@ -4,7 +4,7 @@ let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
-
+let age = 25;
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -137,8 +137,9 @@ function handleCharacteristicValueChanged(event) {
 // Обработка полученных данных
 function receive(data) {
   //console.log('Привет от JavaScript!');
-  console.log('Привет от JavaScript!');
 //log(data, 'in');
+  age+=1;
+  log(age, 'in');
 }
 
 // Отправить данные подключенному устройству
