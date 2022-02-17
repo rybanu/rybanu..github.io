@@ -152,6 +152,12 @@ function receive(data) {
   //inputField1.value=arrayOfStrings[1];
   inputField1.value=result;
   //inputField1.value = counter;
+  counter+=1;
+  if (counter>100)
+  {
+    inputField1.value ='';
+    counter=0;
+  }
   inputField2.append(data+'\n');
 }
 
