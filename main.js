@@ -144,8 +144,8 @@ function handleCharacteristicValueChanged(event) {
 
 // Обработка полученных данных
 function receive(data) {
-  //  log(0,);
-  log(data, 'in');
+ 
+ // log(data, 'in'); //add to log...
   // split/join  string
   var arrayOfStrings = data.split(';');
  var result = (arrayOfStrings[0] << 8) | arrayOfStrings[1];
