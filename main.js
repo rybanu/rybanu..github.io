@@ -155,7 +155,7 @@ function receive(data) {
   counter+=1;
   if (counter>100)
   {
-    inputField1.value ='';
+    inputField2.value ='';
     counter=0;
   }
   inputField2.append(data+'\n');
