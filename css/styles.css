@@ -1,4 +1,4 @@
-﻿body {
+body {
   background: #363E44;
   color: #9FC7EB;
   font-family: 'Roboto Mono', monospace;
@@ -33,13 +33,14 @@ button:active {
         color: #7DDE3C; }
         #input {
               background: #52616C;
-              color: #F031F0; }
-<!--71BDFF-->
+              color: #F3C5C5; }
+
 #terminal div.out {
+
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-    padding: 1px 1px;
-    color: #F031F0;
+   padding: 1px 1px;
+    color: #F3C5C5; 
 }
 
 #terminal div.in {
