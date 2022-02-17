@@ -146,7 +146,10 @@ function handleCharacteristicValueChanged(event) {
 function receive(data) {
   //  log(0,);
   log(data, 'in');
-  inputField1.value=data;
+  // split/join  string
+  var arrayOfStrings = stringToSplit.split(';');
+  
+  inputField1.value=arrayOfStrings[1];
   //inputField1.value = counter;
   inputField2.append(data+'\n');
 }
