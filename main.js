@@ -159,6 +159,8 @@ function receive(data) {
     counter=0;
   }
   inputField2.append(data+'\n');
+  inputField2.focus();
+  inputField2.selectionStart = inputField2.value.length;
 }
 
 // Отправить данные подключенному устройству
