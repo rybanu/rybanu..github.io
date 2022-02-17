@@ -23,7 +23,10 @@ button:active {
   button i.material-icons {
     vertical-align: middle; }
 
+
+
   #input_angl {
+    border: none;
         background: #52616C;
         color: #71BDFF; }
         #input {
@@ -42,10 +45,17 @@ button:active {
 overflow-y: scroll;
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-   padding: 1px 1px;
+   padding: 10px 1px;
     color: #71BDFF;
-
 }
+select, textarea {
+  background: #363E44;
+   width: 200px;
+   padding: 1px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   resize: vertical;
+    }
 
 
 © 2022 GitHub, Inc.
