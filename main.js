@@ -148,7 +148,7 @@ function receive(data) {
   log(data, 'in');
   // split/join  string
   var arrayOfStrings = data.split(';');
- var result = (arrayOfStrings[1] << 8) | arrayOfStrings[2];
+ var result = (arrayOfStrings[0] << 8) | arrayOfStrings[1];
   //inputField1.value=arrayOfStrings[1];
   inputField1.value=result;
   //inputField1.value = counter;
