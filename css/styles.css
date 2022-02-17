@@ -33,10 +33,9 @@ button:active {
         color: #7DDE3C; }
         #input {
               background: #52616C;
-              color: #7DDE3C; }
+              color: #F031F0; }
 <!--71BDFF-->
 #terminal div.out {
-
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
     padding: 1px 1px;
@@ -49,8 +48,8 @@ overflow-y: scroll;
   font-size: 16px;
    padding: 1px 1px;
     color: #71BDFF;
-;
 }
+
 select, textarea {
   background: #363E44;
    color: #F0A431;
