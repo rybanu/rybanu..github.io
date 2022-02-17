@@ -158,7 +158,8 @@ function receive(data) {
     inputField2.value =data;
     counter=0;
   }
-  inputField2.append(data+'\n');
+  //inputField2.append(data+'\n');
+  inputField2.value +=data+'\n';
   inputField2.focus();
   inputField2.selectionStart = inputField2.value.length;
 }
