@@ -5,7 +5,9 @@ let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
 let inputField1 = document.getElementById('input_angl');
-
+let inputField2 = document.getElementById('subject');
+let counter=0;
+let summa='';
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -22,6 +24,10 @@ sendForm.addEventListener('submit', function(event) {
   send(inputField.value); // Отправить содержимое текстового поля
   inputField.value = '';  // Обнулить текстовое поле
   inputField.focus();     // Вернуть фокус на текстовое поле
+//counter+=1;
+//log(counter+'string');
+//inputField1.value = counter;
+//inputField2.append(counter+'string'+'\n');
 
 });
 
@@ -141,6 +147,8 @@ function receive(data) {
   //  log(0,);
   log(data, 'in');
   inputField1.value=data;
+  //inputField1.value = counter;
+  inputField2.append(data+'\n');
 }
 
 // Отправить данные подключенному устройству
@@ -211,5 +219,5 @@ function disconnect() {
     characteristicCache = null;
   }
 
-  //deviceCache = null;
+  deviceCache = null;
 }
