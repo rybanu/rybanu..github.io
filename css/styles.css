@@ -1,5 +1,6 @@
 body {
-  background: #363E44;
+  background: #353C41;
+  ///363E44;
   color: #9FC7EB;
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
@@ -26,17 +27,25 @@ button:active {
 
 
   #input_angl {
+    outline : none;
+    overflow: hidden;
     border: none;
-        background: #52616C;
+        background: #31383D;   //52616C;
     font-size: 70px;
      width: 210px;
-     padding: 1px 1px;
-        color: #7DDE3C; }
+     padding: 1px
+        color: #7DDE3C;
+box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
         #input {
-          width: 210px;
-
-              background: #52616C;
-              color: #F3C5C5; }
+          width: 135px;
+          outline : none;
+          overflow: hidden;
+     background: #31383D;
+     font-size: 16px;
+    color: #F3C5C5;
+box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   }
 
 #terminal div.out {
 
@@ -47,20 +56,23 @@ button:active {
 }
 
 #terminal div.in {
-overflow-y: scroll;
+//overflow-y: scroll;
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
    padding: 1px 1px;
     color: #71BDFF;
 }
 
-select, textarea {
+ textarea {
   outline : none;
   overflow: hidden;
-  background: #363E44;
+    border: none;
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background: #31383D;  // 363E44;
    color: #F0A431;
-   width: 210px;
-   padding: 1px;
+   width: 205px;
+   margin: 1px 1px;
+   padding: 1px
    resize: vertical;
     }
 
@@ -70,3 +82,4 @@ select, textarea {
 
 Terms
 Priv
+
