@@ -40,7 +40,7 @@ button:active {
    font-family: 'Roboto Mono', monospace;
   font-size: 16px;
     padding: 1px 1px;
-    color: #7DDE3C;
+    color: #F031F0;
 }
 
 #terminal div.in {
@@ -53,7 +53,7 @@ overflow-y: scroll;
 }
 select, textarea {
   background: #363E44;
-   color: #7DDE3C;
+   color: #F0A431;
    width: 200px;
    padding: 1px;
    border: 1px solid #ccc;
