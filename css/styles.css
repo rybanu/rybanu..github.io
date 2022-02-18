@@ -6,7 +6,7 @@ body {
   color: #9FC7EB;
   font-family: 'Roboto Mono', monospace;
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  }
 .app {
   display: flex;
   flex-direction: column; }
