@@ -1,5 +1,7 @@
 body {
-
+    position: absolute;
+    top: 5%;
+    left: 20%;
   background: #353C41;
   color: #9FC7EB;
   font-family: 'Roboto Mono', monospace;
