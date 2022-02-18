@@ -161,7 +161,7 @@ function receive(data) {
   inputField2.value +=data+'\n';
   inputField2.focus();
   inputField2.selectionStart =inputField2.value.length;
-  inputField.focus();
+  inputField1.focus();
 }
 
 // Отправить данные подключенному устройству
