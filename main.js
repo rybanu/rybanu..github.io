@@ -153,7 +153,7 @@ function receive(data) {
   inputField1.value=result;
   //inputField1.value = counter;
   counter+=1;
-  if (counter>100)
+  if (counter>10)
   {
     inputField2.value =data+'\n';
     counter=0;
@@ -161,7 +161,7 @@ function receive(data) {
   //inputField2.append(data+'\n');
   inputField2.value +=data+'\n';
   inputField2.focus();
-  inputField2.selectionStart = inputField2.value.length;
+  inputField2.selectionStart =inputField2.value.length;
 }
 
 // Отправить данные подключенному устройству
