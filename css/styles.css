@@ -47,15 +47,12 @@ box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    }
 
 #terminal div.out {
-
-   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
    padding: 1px 1px;
     color: #F3C5C5;
 }
 
 #terminal div.in {
-   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
    padding: 1px 1px;
     color: #71BDFF;
