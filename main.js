@@ -151,7 +151,6 @@ function receive(data) {
  var result = (arrayOfStrings[0] << 8) | arrayOfStrings[1];
   //inputField1.value=arrayOfStrings[1];
   inputField1.value=result;
-  //inputField1.value = counter;
   counter+=1;
   if (counter>10)
   {
@@ -162,6 +161,7 @@ function receive(data) {
   inputField2.value +=data+'\n';
   inputField2.focus();
   inputField2.selectionStart =inputField2.value.length;
+  inputField.focus();
 }
 
 // Отправить данные подключенному устройству
