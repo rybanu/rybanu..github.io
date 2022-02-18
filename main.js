@@ -152,7 +152,7 @@ function receive(data) {
   //inputField1.value=arrayOfStrings[1];
   inputField1.value=result;
   counter+=1;
-  if (counter>10)
+  if (counter>100)
   {
     inputField2.value =data+'\n';
     counter=0;
